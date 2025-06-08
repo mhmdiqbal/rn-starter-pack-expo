@@ -1,11 +1,13 @@
-import { Box, Text } from "@/components";
-
+import tw from '@/lib/tailwind';
+import { Text, View } from 'react-native';
 
 
 export default function HomeScreen() {
   return (
-    <Box flex={1} alignItems="center" justifyContent="center">
-      <Text>Home Screen</Text>
-    </Box>
+    <View style={tw`flex-1 items-center justify-center bg-primary-500`}>
+      <View>
+        <Text>abcdef</Text>
+      </View>
+    </View>
   );
 }

@@ -1,6 +1,4 @@
-import theme from "@/config/theme";
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { ThemeProvider as RestyleThemeProvider } from '@shopify/restyle';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -19,14 +17,12 @@ export default function RootLayout() {
   }
 
   return (
-    <RestyleThemeProvider theme={theme}>
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-        <StatusBar style="auto" />
-      </ThemeProvider>
-    </RestyleThemeProvider>
+    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
+      </Stack>
+      <StatusBar style="auto" />
+    </ThemeProvider>
   );
 }
