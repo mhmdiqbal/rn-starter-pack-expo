@@ -1224,6 +1224,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo-google-fonts/inter@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@expo-google-fonts/inter@npm:0.4.1"
+  checksum: 10c0/982e26d2daae56b4e7740e9c9efab5dd42e35da1464cf7deeb163f09d729d29329f03ba7deb1523a8051e62bfbb6b37334a180832f0aa384d1c59b0cadb74c13
+  languageName: node
+  linkType: hard
+
 "@expo/cli@npm:0.24.14":
   version: 0.24.14
   resolution: "@expo/cli@npm:0.24.14"
@@ -8739,6 +8746,7 @@ __metadata:
   resolution: "starterpack@workspace:."
   dependencies:
     "@babel/core": "npm:^7.25.2"
+    "@expo-google-fonts/inter": "npm:^0.4.1"
     "@expo/vector-icons": "npm:^14.1.0"
     "@react-navigation/bottom-tabs": "npm:^7.3.10"
     "@react-navigation/elements": "npm:^2.3.8"
