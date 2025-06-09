@@ -19,6 +19,9 @@ module.exports = defineConfig([
       "typescript-sort-keys": typeScriptSortKeys,
     },
     rules: {
+      curly: ["warn", "multi-line", "consistent"],
+      eqeqeq: "error",
+      "import/no-duplicates": "error",
       indent: ["error", 2],
       "react/jsx-sort-props": [
         "error",

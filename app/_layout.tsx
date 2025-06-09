@@ -17,6 +17,7 @@ export default function RootLayout() {
     return null;
   }
 
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
