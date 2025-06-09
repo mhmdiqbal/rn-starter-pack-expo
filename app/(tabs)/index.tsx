@@ -1,5 +1,6 @@
-import tw from '@/lib/tailwind';
 import { Text, View } from 'react-native';
+
+import tw from '@/lib/tailwind';
 
 
 export default function HomeScreen() {
