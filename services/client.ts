@@ -2,11 +2,11 @@ import axios from "axios";
 
 const client = axios.create({
   baseURL: "https://your-api-base-url.com/api", // Replace with your API base URL
-  timeout: 10000, // Request timeout
   headers: {
     "Content-Type": "application/json",
     // You can add default headers here
   },
+  timeout: 10000, // Request timeout
 });
 
 // Add request interceptor
@@ -26,7 +26,7 @@ client.interceptors.request.use(
 
 // Add response interceptor
 client.interceptors.response.use(
-  (response) => response.data, // Return only the data from the response
+  (response) => response,
   (error) => {
     // Handle errors globally
     if (error.response) {

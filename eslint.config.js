@@ -23,6 +23,13 @@ module.exports = defineConfig([
       eqeqeq: "error",
       "import/no-duplicates": "error",
       indent: ["error", 2],
+      "react/jsx-closing-bracket-location": [
+        "error",
+        {
+          nonEmpty: "after-props",
+          selfClosing: "after-props",
+        },
+      ],
       "react/jsx-sort-props": [
         "error",
         {
@@ -30,6 +37,13 @@ module.exports = defineConfig([
           ignoreCase: true,
           multiline: "last",
           shorthandFirst: true,
+        },
+      ],
+      "react/self-closing-comp": [
+        "error",
+        {
+          component: true,
+          html: true,
         },
       ],
       "simple-import-sort/exports": "error",
