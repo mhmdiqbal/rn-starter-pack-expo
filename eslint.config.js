@@ -1,10 +1,16 @@
 // https://docs.expo.dev/guides/using-eslint/
 const { defineConfig } = require("eslint/config");
+
 const expoConfig = require("eslint-config-expo/flat");
+
 const react = require("eslint-plugin-react");
+
 const simpleImportSort = require("eslint-plugin-simple-import-sort");
+
 const typeScriptSortKeys = require("eslint-plugin-typescript-sort-keys");
+
 const sortDestructureKeys = require("eslint-plugin-sort-destructure-keys");
+
 const sortKeysFix = require("eslint-plugin-sort-keys-fix");
 
 module.exports = defineConfig([
@@ -23,6 +29,14 @@ module.exports = defineConfig([
       eqeqeq: "error",
       "import/no-duplicates": "error",
       indent: ["error", 2],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          max: 1,
+          maxBOF: 0,
+          maxEOF: 0,
+        },
+      ],
       "react/jsx-closing-bracket-location": [
         "error",
         {
