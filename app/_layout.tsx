@@ -7,8 +7,8 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'react-native';
 
-import useCustomFonts from '@/hooks/useCustomFonts';
-import queryClient from '@/lib/query-client';
+import { useCustomFonts } from '@/hooks/useCustomFonts';
+import { queryClient } from '@/lib/query-client';
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -17,7 +17,6 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-
 
   return (
     <QueryClientProvider client={queryClient}>

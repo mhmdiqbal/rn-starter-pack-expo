@@ -4,7 +4,7 @@ import { FlatList, RefreshControl, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { usePosts } from '@/features/home/queries';
-import tw from '@/lib/tailwind';
+import { tw } from '@/lib/tailwind';
 
 const SKELETONS = Array.from({ length: 10 }, (_, i) => ({ id: i, title: 'Loading...' }));
 

@@ -18,28 +18,28 @@ import { Inter_900Black } from "@expo-google-fonts/inter/900Black";
 import { Inter_900Black_Italic } from "@expo-google-fonts/inter/900Black_Italic";
 import { useFonts } from "expo-font";
 
-const useCustomFonts = () => {
+const useCustomFonts = (): { loaded: boolean } => {
   const [loaded] = useFonts({
-    Thin: Inter_100Thin,
-    "Thin-Italic": Inter_100Thin_Italic,
-    ExtraLight: Inter_200ExtraLight,
-    "ExtraLight-Italic": Inter_200ExtraLight_Italic,
-    Light: Inter_300Light,
-    "Light-Italic": Inter_300Light_Italic,
-    Regular: Inter_400Regular,
-    "Regular-Italic": Inter_400Regular_Italic,
-    Medium: Inter_500Medium,
-    "Medium-Italic": Inter_500Medium_Italic,
-    SemiBold: Inter_600SemiBold,
-    "SemiBold-Italic": Inter_600SemiBold_Italic,
+    Black: Inter_900Black,
+    "Black-Italic": Inter_900Black_Italic,
     Bold: Inter_700Bold,
     "Bold-Italic": Inter_700Bold_Italic,
     ExtraBold: Inter_800ExtraBold,
     "ExtraBold-Italic": Inter_800ExtraBold_Italic,
-    Black: Inter_900Black,
-    "Black-Italic": Inter_900Black_Italic,
+    ExtraLight: Inter_200ExtraLight,
+    "ExtraLight-Italic": Inter_200ExtraLight_Italic,
+    Light: Inter_300Light,
+    "Light-Italic": Inter_300Light_Italic,
+    Medium: Inter_500Medium,
+    "Medium-Italic": Inter_500Medium_Italic,
+    Regular: Inter_400Regular,
+    "Regular-Italic": Inter_400Regular_Italic,
+    SemiBold: Inter_600SemiBold,
+    "SemiBold-Italic": Inter_600SemiBold_Italic,
+    Thin: Inter_100Thin,
+    "Thin-Italic": Inter_100Thin_Italic,
   });
 
   return { loaded };
 };
-export default useCustomFonts;
+export { useCustomFonts };

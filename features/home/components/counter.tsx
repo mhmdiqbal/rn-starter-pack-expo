@@ -1,6 +1,6 @@
 import { Text } from "react-native";
 
-import tw from "@/lib/tailwind";
+import { tw } from "@/lib/tailwind";
 
 import { useCounterStore } from "../stores";
 
