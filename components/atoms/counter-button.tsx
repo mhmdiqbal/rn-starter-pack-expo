@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity } from "react-native";
 
-import tw from "@/lib/tailwind";
+import { tw } from "@/lib/tailwind";
 
 
 interface CounterButtonProps {
