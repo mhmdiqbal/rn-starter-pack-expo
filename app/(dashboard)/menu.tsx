@@ -8,7 +8,7 @@ import { tw } from '@/lib/tailwind';
 
 const SKELETONS = Array.from({ length: 10 }, (_, i) => ({ id: i, title: 'Loading...' }));
 
-export default function PostsScreen() {
+export default function MenuScreen() {
   const { data, error, isLoading, refetch } = usePosts();
 
   if (error) return <Text>Error loading users.</Text>;

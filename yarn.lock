@@ -1240,6 +1240,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo-google-fonts/dm-sans@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@expo-google-fonts/dm-sans@npm:0.4.1"
+  checksum: 10c0/6da7aa293bd786f9a63f8ec77a9f0a27618b4e923eb601e5fd24924f455623967f0e1f6a58c9e253407b7f184db4d83d503d1a289ad1c45a9be331a0c35feb0b
+  languageName: node
+  linkType: hard
+
 "@expo-google-fonts/inter@npm:^0.4.1":
   version: 0.4.1
   resolution: "@expo-google-fonts/inter@npm:0.4.1"
@@ -2486,7 +2493,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/estree@npm:^1.0.6":
+"@types/eslint-plugin-tailwindcss@npm:^3":
+  version: 3.17.0
+  resolution: "@types/eslint-plugin-tailwindcss@npm:3.17.0"
+  dependencies:
+    "@types/eslint": "npm:*"
+  checksum: 10c0/256c720bab11019fe99fc1a60e8d57221e1d4312f43ae05f9526de61be51050d584f3735ba10765e0cfc70ed318acf25743130f5b4f426412550dd68bc095f37
+  languageName: node
+  linkType: hard
+
+"@types/eslint@npm:*":
+  version: 9.6.1
+  resolution: "@types/eslint@npm:9.6.1"
+  dependencies:
+    "@types/estree": "npm:*"
+    "@types/json-schema": "npm:*"
+  checksum: 10c0/69ba24fee600d1e4c5abe0df086c1a4d798abf13792d8cfab912d76817fe1a894359a1518557d21237fbaf6eda93c5ab9309143dee4c59ef54336d1b3570420e
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:*, @types/estree@npm:^1.0.6":
   version: 1.0.8
   resolution: "@types/estree@npm:1.0.8"
   checksum: 10c0/39d34d1afaa338ab9763f37ad6066e3f349444f9052b9676a7cc0252ef9485a41c6d81c9c4e0d26e9077993354edf25efc853f3224dd4b447175ef62bdcc86a5
@@ -2534,7 +2560,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:^7.0.15, @types/json-schema@npm:^7.0.9":
+"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.15, @types/json-schema@npm:^7.0.9":
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
   checksum: 10c0/a996a745e6c5d60292f36731dd41341339d4eeed8180bb09226e5c8d23759067692b1d88e5d91d72ee83dfc00d3aca8e7bd43ea120516c17922cbcb7c3e252db
@@ -3669,6 +3695,62 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cajero@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "cajero@workspace:."
+  dependencies:
+    "@babel/core": "npm:^7.25.2"
+    "@expo-google-fonts/dm-sans": "npm:^0.4.1"
+    "@expo-google-fonts/inter": "npm:^0.4.1"
+    "@expo/vector-icons": "npm:^14.1.0"
+    "@react-native-async-storage/async-storage": "npm:2.1.2"
+    "@react-navigation/bottom-tabs": "npm:^7.3.10"
+    "@react-navigation/elements": "npm:^2.3.8"
+    "@react-navigation/native": "npm:^7.1.6"
+    "@tanstack/eslint-plugin-query": "npm:^5.78.0"
+    "@tanstack/react-query": "npm:^5.80.6"
+    "@types/eslint-plugin-tailwindcss": "npm:^3"
+    "@types/react": "npm:~19.0.10"
+    axios: "npm:^1.9.0"
+    eslint: "npm:^9.25.0"
+    eslint-config-expo: "npm:~9.2.0"
+    eslint-plugin-react: "npm:^7.37.5"
+    eslint-plugin-react-hooks: "npm:^5.2.0"
+    eslint-plugin-simple-import-sort: "npm:^12.1.1"
+    eslint-plugin-sort-destructure-keys: "npm:^2.0.0"
+    eslint-plugin-sort-keys-fix: "npm:^1.1.2"
+    eslint-plugin-tailwindcss: "npm:^3.18.0"
+    eslint-plugin-typescript-sort-keys: "npm:^3.3.0"
+    expo: "npm:^53.0.15"
+    expo-blur: "npm:~14.1.5"
+    expo-constants: "npm:~17.1.6"
+    expo-font: "npm:~13.3.2"
+    expo-haptics: "npm:~14.1.4"
+    expo-image: "npm:~2.3.1"
+    expo-linear-gradient: "npm:~14.1.5"
+    expo-linking: "npm:~7.1.6"
+    expo-router: "npm:~5.1.2"
+    expo-splash-screen: "npm:~0.30.9"
+    expo-status-bar: "npm:~2.2.3"
+    expo-symbols: "npm:~0.4.5"
+    expo-system-ui: "npm:~5.0.9"
+    expo-web-browser: "npm:~14.2.0"
+    moti: "npm:^0.30.0"
+    react: "npm:19.0.0"
+    react-dom: "npm:19.0.0"
+    react-native: "npm:0.79.4"
+    react-native-gesture-handler: "npm:~2.24.0"
+    react-native-reanimated: "npm:~3.17.4"
+    react-native-safe-area-context: "npm:5.4.0"
+    react-native-screens: "npm:~4.11.1"
+    react-native-web: "npm:~0.20.0"
+    react-native-webview: "npm:13.13.5"
+    twrnc: "npm:^4.8.0"
+    typescript: "npm:~5.8.3"
+    zustand: "npm:^5.0.5"
+  languageName: unknown
+  linkType: soft
+
 "call-bind-apply-helpers@npm:^1.0.0, call-bind-apply-helpers@npm:^1.0.1, call-bind-apply-helpers@npm:^1.0.2":
   version: 1.0.2
   resolution: "call-bind-apply-helpers@npm:1.0.2"
@@ -4777,6 +4859,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-tailwindcss@npm:^3.18.0":
+  version: 3.18.0
+  resolution: "eslint-plugin-tailwindcss@npm:3.18.0"
+  dependencies:
+    fast-glob: "npm:^3.2.5"
+    postcss: "npm:^8.4.4"
+  peerDependencies:
+    tailwindcss: ^3.4.0
+  checksum: 10c0/e4e782c55bea1937d0a247853c8539914f99d08351d70b33b279289674c85cbb5cbed2e5d3e35cc8b7fea62b1a5495c2e51ad3b98d07468e4af37497d23921b4
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-typescript-sort-keys@npm:^3.3.0":
   version: 3.3.0
   resolution: "eslint-plugin-typescript-sort-keys@npm:3.3.0"
@@ -5275,7 +5369,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.2":
+"fast-glob@npm:^3.2.5, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.2":
   version: 3.3.3
   resolution: "fast-glob@npm:3.3.3"
   dependencies:
@@ -8137,6 +8231,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss@npm:^8.4.4":
+  version: 8.5.6
+  resolution: "postcss@npm:8.5.6"
+  dependencies:
+    nanoid: "npm:^3.3.11"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10c0/5127cc7c91ed7a133a1b7318012d8bfa112da9ef092dddf369ae699a1f10ebbd89b1b9f25f3228795b84585c72aabd5ced5fc11f2ba467eedf7b081a66fad024
+  languageName: node
+  linkType: hard
+
 "postcss@npm:^8.4.47":
   version: 8.5.4
   resolution: "postcss@npm:8.5.4"
@@ -9335,59 +9440,6 @@ __metadata:
   checksum: 10c0/4633d9afe8cd2f6c7fb2cebdee3cc8de7fd5f6f9736645fd08c0f66872a303061ce9cc0ccf46f4216dc94a7941b56e331012398dc0024dc25e46b5eb5d4ff018
   languageName: node
   linkType: hard
-
-"starterpack@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "starterpack@workspace:."
-  dependencies:
-    "@babel/core": "npm:^7.25.2"
-    "@expo-google-fonts/inter": "npm:^0.4.1"
-    "@expo/vector-icons": "npm:^14.1.0"
-    "@react-native-async-storage/async-storage": "npm:2.1.2"
-    "@react-navigation/bottom-tabs": "npm:^7.3.10"
-    "@react-navigation/elements": "npm:^2.3.8"
-    "@react-navigation/native": "npm:^7.1.6"
-    "@tanstack/eslint-plugin-query": "npm:^5.78.0"
-    "@tanstack/react-query": "npm:^5.80.6"
-    "@types/react": "npm:~19.0.10"
-    axios: "npm:^1.9.0"
-    eslint: "npm:^9.25.0"
-    eslint-config-expo: "npm:~9.2.0"
-    eslint-plugin-react: "npm:^7.37.5"
-    eslint-plugin-react-hooks: "npm:^5.2.0"
-    eslint-plugin-simple-import-sort: "npm:^12.1.1"
-    eslint-plugin-sort-destructure-keys: "npm:^2.0.0"
-    eslint-plugin-sort-keys-fix: "npm:^1.1.2"
-    eslint-plugin-typescript-sort-keys: "npm:^3.3.0"
-    expo: "npm:^53.0.15"
-    expo-blur: "npm:~14.1.5"
-    expo-constants: "npm:~17.1.6"
-    expo-font: "npm:~13.3.2"
-    expo-haptics: "npm:~14.1.4"
-    expo-image: "npm:~2.3.1"
-    expo-linear-gradient: "npm:~14.1.5"
-    expo-linking: "npm:~7.1.6"
-    expo-router: "npm:~5.1.2"
-    expo-splash-screen: "npm:~0.30.9"
-    expo-status-bar: "npm:~2.2.3"
-    expo-symbols: "npm:~0.4.5"
-    expo-system-ui: "npm:~5.0.9"
-    expo-web-browser: "npm:~14.2.0"
-    moti: "npm:^0.30.0"
-    react: "npm:19.0.0"
-    react-dom: "npm:19.0.0"
-    react-native: "npm:0.79.4"
-    react-native-gesture-handler: "npm:~2.24.0"
-    react-native-reanimated: "npm:~3.17.4"
-    react-native-safe-area-context: "npm:5.4.0"
-    react-native-screens: "npm:~4.11.1"
-    react-native-web: "npm:~0.20.0"
-    react-native-webview: "npm:13.13.5"
-    twrnc: "npm:^4.8.0"
-    typescript: "npm:~5.8.3"
-    zustand: "npm:^5.0.5"
-  languageName: unknown
-  linkType: soft
 
 "statuses@npm:2.0.1":
   version: 2.0.1
