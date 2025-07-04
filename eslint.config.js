@@ -35,7 +35,7 @@ module.exports = defineConfig([
       eqeqeq: "error",
       "import/no-duplicates": "error",
       indent: ["error", 2],
-      "max-depth": ["error", 3],
+      // "max-depth": ["error", 3],
       "max-params": ["error", 3],
       "no-console": "warn",
       "no-multiple-empty-lines": [

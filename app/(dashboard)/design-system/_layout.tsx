@@ -8,6 +8,7 @@ export default function DesignSystemLayout() {
       }}>
       <Stack.Screen name="index" />
       <Stack.Screen name="buttons" />
+      <Stack.Screen name="text-fields" />
     </Stack>
   );
 }

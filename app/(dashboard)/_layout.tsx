@@ -32,7 +32,7 @@ const Sidebar = () => {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <View style={tw`w-3xs bg-sup-yellow`}>
+    <View style={tw`bg-sup-yellow`}>
       {tabs.map((tab) => {
         const isActive = pathname === tab.path;
         return (
