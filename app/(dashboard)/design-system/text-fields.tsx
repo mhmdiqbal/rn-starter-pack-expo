@@ -1,11 +1,11 @@
 import { ScrollView, View } from "react-native";
 
-import TextField from "@/components/atoms/text-field";
-import { tw } from "@/lib/tailwind";
+import TextField from "@/components/text-field";
+import gs from "@/lib/global-styles";
 
 export default function TextFieldsScreen() {
   return (
-    <ScrollView contentContainerStyle={tw`flex-1 bg-neutral-200 p-2`} >
+    <ScrollView contentContainerStyle={[gs.flex1, gs.centerAll]}>
       <TextFieldList />
     </ScrollView>
   );
@@ -18,5 +18,5 @@ const TextFieldList = () => {
       <TextField />
       <TextField />
     </View>
-  )
-}
+  );
+};

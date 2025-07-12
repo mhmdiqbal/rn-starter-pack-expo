@@ -7,7 +7,8 @@ import ButtonIcon, {
   ButtonIconVariants,
 } from "@/components/button-icon";
 import Text from "@/components/text";
-import { tw } from "@/lib/tailwind";
+
+import styles from "./styles";
 
 const buttonVariants: ButtonVariants[] = [
   "primary",
@@ -21,7 +22,7 @@ const buttonVariants: ButtonVariants[] = [
 
 export default function ButtonsScreen() {
   return (
-    <ScrollView contentContainerStyle={tw`grow gap-4 bg-neutral-200 p-2`}>
+    <ScrollView contentContainerStyle={styles.content}>
       {buttonVariants.map((variant) => (
         <ButtonList key={variant} variant={variant} />
       ))}
@@ -35,7 +36,7 @@ interface ButtonListProps {
 
 const ButtonList = ({ variant }: ButtonListProps) => {
   return (
-    <View style={tw`flex-row items-center gap-2`}>
+    <View style={styles.buttonListContainer}>
       <Text variant="heading-3">{variant}</Text>
       <ButtonGroupSizes size="lg" variant={variant} />
       <ButtonGroupSizes size="md" variant={variant} />
@@ -54,7 +55,7 @@ interface ButtonGroupSizesProps {
 
 const ButtonGroupSizes = ({ size, variant }: ButtonGroupSizesProps) => {
   return (
-    <View style={tw`gap-2`}>
+    <View style={styles.buttonGroupSizesContainer}>
       <Button size={size} title="Button" variant={variant} onPress={() => {}} />
       <Button
         disabled
@@ -94,10 +95,10 @@ const ButtonGroupSizes = ({ size, variant }: ButtonGroupSizesProps) => {
         size={size}
         title="Button"
         variant={variant}
-        leftIcon={({  color, height, width  }) => (
+        leftIcon={({ color, height, width }) => (
           <IcEye color={color} height={height} width={width} />
         )}
-        rightIcon={({  color, height, width  }) => (
+        rightIcon={({ color, height, width }) => (
           <IcEye color={color} height={height} width={width} />
         )}
         onPress={() => {}}/>
@@ -112,7 +113,7 @@ interface ButtonIconGroupSizesProps {
 
 const ButtonIconGroupSizes = ({ size, variant }: ButtonIconGroupSizesProps) => {
   return (
-    <View style={tw`gap-2`}>
+    <View style={styles.buttonGroupSizesContainer}>
       <ButtonIcon
         size={size}
         variant={variant}

@@ -1,11 +1,12 @@
 import { ScrollView } from "react-native";
 
 import Text from "@/components/text";
-import { tw } from "@/lib/tailwind";
+
+import styles from "./styles";
 
 export default function TextScreen() {
   return (
-    <ScrollView contentContainerStyle={tw`flex-1 bg-neutral-200 p-2`}>
+    <ScrollView contentContainerStyle={styles.content}>
       <Text variant="heading-1">Heading-1</Text>
       <Text variant="heading-2">Heading-2</Text>
       <Text variant="heading-3">Heading-3</Text>

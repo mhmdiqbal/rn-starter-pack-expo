@@ -5,5 +5,5 @@ export default function TextField() {
     <View>
       <TextInput />
     </View>
-  )
+  );
 }

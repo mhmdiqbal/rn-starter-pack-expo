@@ -1,9 +1,9 @@
-import { useRouter } from 'expo-router';
-import React from 'react';
-import { Button, View } from 'react-native';
+import { useRouter } from "expo-router";
+import React from "react";
+import { Button, View } from "react-native";
 
-import { tw } from '@/lib/tailwind';
-import { useAuthStore } from '@/stores/use-auth-store';
+import gs from "@/lib/global-styles";
+import { useAuthStore } from "@/stores/use-auth-store";
 
 export default function DashboardScreen() {
   const logout = useAuthStore((state) => state.logout);
@@ -11,11 +11,11 @@ export default function DashboardScreen() {
 
   const handleLogout = () => {
     logout();
-    router.replace('/signin');
+    router.replace("/signin");
   };
 
   return (
-    <View style={tw`flex-1 items-center justify-center bg-primary-500`}>
+    <View style={[gs.flex1, gs.centerAll]}>
       <Button title="Logout" onPress={handleLogout} />
     </View>
   );
