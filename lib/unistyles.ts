@@ -75,8 +75,8 @@ const lightTheme = {
       9: "rgba(8, 112, 37, 0.75)",
     },
     sup: {
-      red: "#FEF5E2",
-      yellow: "#FAB8B8",
+      yellow: "#FEF5E2",
+      red: "#FAB8B8",
     },
     transparent: "transparent",
   },

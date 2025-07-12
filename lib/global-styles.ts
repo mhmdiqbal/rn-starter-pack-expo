@@ -15,6 +15,17 @@ const gs = StyleSheet.create((theme) => ({
     right: 0,
     top: 0,
   },
+  bgcolor: (color: string) => {
+    const [colorKey, shade] = color.split(".");
+
+    const themeColor = shade
+      ? (theme.colors as any)[colorKey]?.[shade]
+      : (theme.colors as any)[colorKey] || color;
+
+    return {
+      backgroundColor: themeColor,
+    };
+  },
   border: {
     borderColor: theme.colors.neutral[300],
     borderWidth: 1,
@@ -92,6 +103,16 @@ const gs = StyleSheet.create((theme) => ({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  txcolor: (color: string) => {
+    const [colorKey, shade] = color.split(".");
+
+    const themeColor = shade
+      ? (theme.colors as any)[colorKey]?.[shade]
+      : (theme.colors as any)[colorKey] || color;
+    return {
+      color: themeColor,
+    };
+  },
   rowCenter: {
     alignItems: "center",
     flexDirection: "row",
@@ -119,10 +140,9 @@ const gs = StyleSheet.create((theme) => ({
     shadowRadius: 8,
   },
   shadowMd: {
-    elevation: 4,
     shadowColor: "#000",
-    shadowOffset: { height: 2, width: 0 },
-    shadowOpacity: 0.15,
+    shadowOffset: { height: 0, width: 0 },
+    shadowOpacity: 0.1,
     shadowRadius: 4,
   },
   shadowSm: {
@@ -131,6 +151,9 @@ const gs = StyleSheet.create((theme) => ({
     shadowOffset: { height: 1, width: 0 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
+  },
+  textCenter: {
+    textAlign: "center",
   },
 }));
 

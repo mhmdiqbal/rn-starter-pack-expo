@@ -1,6 +1,6 @@
 import { ScrollView, View } from "react-native";
 
-import IcEye from "@/assets/images/svgs/icons/ic-eye.svg";
+import IcEye from "@/assets/images/svgs/icons/eye.svg";
 import Button, { ButtonSizes, ButtonVariants } from "@/components/button";
 import ButtonIcon, {
   ButtonIconSizes,
