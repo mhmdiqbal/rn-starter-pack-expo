@@ -15,8 +15,6 @@ const sortKeysFix = require("eslint-plugin-sort-keys-fix");
 
 const reactHooks = require("eslint-plugin-react-hooks");
 
-const tailwindcss = require("eslint-plugin-tailwindcss");
-
 module.exports = defineConfig([
   expoConfig,
   {
@@ -27,7 +25,6 @@ module.exports = defineConfig([
       "simple-import-sort": simpleImportSort,
       "sort-destructure-keys": sortDestructureKeys,
       "sort-keys-fix": sortKeysFix,
-      tailwindcss,
       "typescript-sort-keys": typeScriptSortKeys,
     },
     rules: {
@@ -78,21 +75,8 @@ module.exports = defineConfig([
       "simple-import-sort/imports": "error",
       "sort-destructure-keys/sort-destructure-keys": 2,
       "sort-keys-fix/sort-keys-fix": "warn",
-      "tailwindcss/classnames-order": "error",
-      "tailwindcss/enforces-negative-arbitrary-values": "warn",
-      "tailwindcss/enforces-shorthand": "warn",
-      "tailwindcss/migration-from-tailwind-2": "warn",
-      "tailwindcss/no-arbitrary-value": "off",
-      "tailwindcss/no-contradicting-classname": "error",
-      "tailwindcss/no-custom-classname": "warn",
       "typescript-sort-keys/interface": "error",
       "typescript-sort-keys/string-enum": "error",
-    },
-    settings: {
-      tailwindcss: {
-        config: "tailwind.config.js",
-        tags: ["tw", "tw.style"],
-      },
     },
   },
 ]);

@@ -48,13 +48,11 @@
     "react-native-unistyles": "^3.0.2",
     "react-native-web": "~0.20.0",
     "react-native-webview": "13.13.5",
-    "twrnc": "^4.8.0",
     "zustand": "^5.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@tanstack/eslint-plugin-query": "^5.78.0",
-    "@types/eslint-plugin-tailwindcss": "^3",
     "@types/react": "~19.0.10",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
@@ -63,7 +61,6 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "eslint-plugin-tailwindcss": "^3.18.0",
     "eslint-plugin-typescript-sort-keys": "^3.3.0",
     "react-native-svg-transformer": "^1.5.1",
     "typescript": "~5.8.3"
