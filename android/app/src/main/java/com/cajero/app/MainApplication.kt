@@ -1,4 +1,4 @@
-package com.iqbal6.StarterPack
+package com.cajero.app
 
 import android.app.Application
 import android.content.res.Configuration

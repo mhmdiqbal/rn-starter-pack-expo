@@ -1,8 +1,12 @@
-import { useRouter } from "expo-router";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
 
 import IcEye from "@/assets/images/svgs/icons/ic-eye.svg";
-import Button, { ButtonVariants } from "@/components/atoms/button";
+import Button, { ButtonSizes, ButtonVariants } from "@/components/button";
+import ButtonIcon, {
+  ButtonIconSizes,
+  ButtonIconVariants,
+} from "@/components/button-icon";
+import Text from "@/components/text";
 import { tw } from "@/lib/tailwind";
 
 const buttonVariants: ButtonVariants[] = [
@@ -16,7 +20,6 @@ const buttonVariants: ButtonVariants[] = [
 ];
 
 export default function ButtonsScreen() {
-  const router = useRouter();
   return (
     <ScrollView contentContainerStyle={tw`grow gap-4 bg-neutral-200 p-2`}>
       {buttonVariants.map((variant) => (
@@ -33,46 +36,97 @@ interface ButtonListProps {
 const ButtonList = ({ variant }: ButtonListProps) => {
   return (
     <View style={tw`flex-row items-center gap-2`}>
-      <Text style={tw`w-28 text-button-lg`}>{variant}</Text>
-      <View style={tw`gap-2`}>
-        <Button size="lg" title="Button" variant={variant} onPress={() => {}} />
-        <Button
-          disabled
-          size="lg"
-          title="Button"
-          variant={variant}
-          onPress={() => {}}/>
-        <Button
-          size="lg"
-          title="Button"
-          variant={variant}
-          leftIcon={({ size, style }) => (
-            <IcEye height={size} style={style} width={size} />
-          )}
-          rightIcon={({ size, style }) => (
-            <IcEye height={size} style={style} width={size} />
-          )}
-          onPress={() => {}}/>
-        <Button
-          disabled
-          size="lg"
-          title="Button"
-          variant={variant}
-          onPress={() => {}}/>
-      </View>
-      <Button size="md" title="Button" variant={variant} onPress={() => {}} />
+      <Text variant="heading-3">{variant}</Text>
+      <ButtonGroupSizes size="lg" variant={variant} />
+      <ButtonGroupSizes size="md" variant={variant} />
+      <ButtonGroupSizes size="sm" variant={variant} />
+      <ButtonIconGroupSizes size="lg" variant={variant} />
+      <ButtonIconGroupSizes size="md" variant={variant} />
+      <ButtonIconGroupSizes size="sm" variant={variant} />
+    </View>
+  );
+};
+
+interface ButtonGroupSizesProps {
+  size: ButtonSizes;
+  variant: ButtonVariants;
+}
+
+const ButtonGroupSizes = ({ size, variant }: ButtonGroupSizesProps) => {
+  return (
+    <View style={tw`gap-2`}>
+      <Button size={size} title="Button" variant={variant} onPress={() => {}} />
       <Button
         disabled
-        size="md"
+        size={size}
         title="Button"
         variant={variant}
         onPress={() => {}}/>
-      <Button size="sm" title="Button" variant={variant} onPress={() => {}} />
       <Button
-        disabled
-        size="sm"
+        size={size}
         title="Button"
         variant={variant}
+        leftIcon={({ color, height, width }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
+        onPress={() => {}}/>
+      <Button
+        size={size}
+        title="Button"
+        variant={variant}
+        rightIcon={({ color, height, width }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
+        onPress={() => {}}/>
+      <Button
+        size={size}
+        title="Button"
+        variant={variant}
+        leftIcon={({ color, height, width }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
+        rightIcon={({ color, height, width }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
+        onPress={() => {}}/>
+      <Button
+        disabled
+        size={size}
+        title="Button"
+        variant={variant}
+        leftIcon={({  color, height, width  }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
+        rightIcon={({  color, height, width  }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
+        onPress={() => {}}/>
+    </View>
+  );
+};
+
+interface ButtonIconGroupSizesProps {
+  size: ButtonIconSizes;
+  variant: ButtonIconVariants;
+}
+
+const ButtonIconGroupSizes = ({ size, variant }: ButtonIconGroupSizesProps) => {
+  return (
+    <View style={tw`gap-2`}>
+      <ButtonIcon
+        size={size}
+        variant={variant}
+        icon={({ color, height, width }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
+        onPress={() => {}}/>
+      <ButtonIcon
+        disabled
+        size={size}
+        variant={variant}
+        icon={({ color, height, width }) => (
+          <IcEye color={color} height={height} width={width} />
+        )}
         onPress={() => {}}/>
     </View>
   );

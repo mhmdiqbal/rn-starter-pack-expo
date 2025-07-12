@@ -46,7 +46,7 @@ module.exports = defineConfig([
           maxEOF: 0,
         },
       ],
-      "no-nested-ternary": "error",
+      // "no-nested-ternary": "error",
       "prefer-object-spread": "error",
       "react-hooks/exhaustive-deps": "off",
       "react-hooks/rules-of-hooks": "error",

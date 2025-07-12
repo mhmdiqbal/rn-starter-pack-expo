@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.iqbal6.StarterPack'
+    namespace 'com.cajero.app'
     defaultConfig {
-        applicationId 'com.iqbal6.StarterPack'
+        applicationId 'com.cajero.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

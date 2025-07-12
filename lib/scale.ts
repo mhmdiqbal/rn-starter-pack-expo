@@ -6,8 +6,8 @@ const [shortDimension, longDimension] =
   width < height ? [width, height] : [height, width];
 
 // Design guideline dimensions (based on standard figma screen)
-const GUIDELINE_BASE_WIDTH = 1366;
-const GUIDELINE_BASE_HEIGHT = 1024;
+const GUIDELINE_BASE_WIDTH = 1024;
+const GUIDELINE_BASE_HEIGHT = 1366;
 
 // Scaling ratios
 const widthRatio = shortDimension / GUIDELINE_BASE_WIDTH;
