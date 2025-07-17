@@ -18,7 +18,7 @@ import IcBusiness1 from "@/assets/images/svgs/icons/store-1.svg";
 import { Tab } from "./types";
 
 export const TABS: Tab[] = [
-  { Icon: [IcMenu0, IcMenu1], label: "Dashboard", path: "/(dashboard)" },
+  // { Icon: [IcMenu0, IcMenu1], label: "Dashboard", path: "/(dashboard)" },
   { Icon: [IcMenu0, IcMenu1], label: "Menu", path: "/(dashboard)/menu" },
   { Icon: [IcReceipts0, IcReceipts1], label: "Receipts", path: "/(dashboard)/receipt" },
   { Icon: [IcStock0, IcStock1], label: "Stock", path: "/(dashboard)/stock" },
