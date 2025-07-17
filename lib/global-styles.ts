@@ -75,6 +75,18 @@ const gs = StyleSheet.create((theme) => ({
   m: (value: number) => ({
     margin: value,
   }),
+  mb: (value: number) => ({
+    marginBottom: value,
+  }),
+  ml: (value: number) => ({
+    marginLeft: value,
+  }),
+  mr: (value: number) => ({
+    marginRight: value,
+  }),
+  mt: (value: number) => ({
+    marginTop: value,
+  }),
   mx: (value: number) => ({
     marginHorizontal: value,
   }),
@@ -102,16 +114,6 @@ const gs = StyleSheet.create((theme) => ({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
-  },
-  txcolor: (color: string) => {
-    const [colorKey, shade] = color.split(".");
-
-    const themeColor = shade
-      ? (theme.colors as any)[colorKey]?.[shade]
-      : (theme.colors as any)[colorKey] || color;
-    return {
-      color: themeColor,
-    };
   },
   rowCenter: {
     alignItems: "center",
@@ -154,6 +156,16 @@ const gs = StyleSheet.create((theme) => ({
   },
   textCenter: {
     textAlign: "center",
+  },
+  txcolor: (color: string) => {
+    const [colorKey, shade] = color.split(".");
+
+    const themeColor = shade
+      ? (theme.colors as any)[colorKey]?.[shade]
+      : (theme.colors as any)[colorKey] || color;
+    return {
+      color: themeColor,
+    };
   },
 }));
 
