@@ -15,5 +15,3 @@ export default function ButtonBase({ style, ...props }: ButtonBaseProps) {
       {...props}/>
   );
 }
-
-export type { ButtonBaseProps } from "./button-base.types";
