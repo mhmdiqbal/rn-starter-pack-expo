@@ -8,9 +8,12 @@ import { vs } from "@/lib/scale";
 
 import If from "../if";
 import Text from "../text";
-import { TEXT_FIELD_HEIGHTS, TEXT_FIELD_LABEL_TRANSLATE_X } from "./text-field.cons";
+import {
+  TEXT_FIELD_HEIGHTS,
+  TEXT_FIELD_LABEL_TRANSLATE_X,
+} from "./text-field.cons";
 import styles from "./text-field.styles";
-import { InputSizes, TextFieldProps } from "./text-field.types";
+import { LabelProps, TextFieldProps } from "./text-field.types";
 
 const UniTextInput = withUnistyles(TextInput, (theme, rt) => ({
   cursorColor: theme.colors.neutral[600],
@@ -26,6 +29,7 @@ export default function TextField({
   onChangeText,
   placeholder,
   size = "md",
+  style,
   value,
   ...props
 }: TextFieldProps) {
@@ -42,16 +46,16 @@ export default function TextField({
     <View>
       <View style={styles.container}>
         <View style={styles.wrapper}>
-          {label ? (
+          <If when={!!label}>
             <Label error={error} focused={focused} label={label!} size={size} />
-          ) : null}
-          {LeftComponent ? LeftComponent : null}
+          </If>
+          {LeftComponent}
           <UniTextInput
             placeholder={placeholder || label}
-            style={styles.input}
+            style={[styles.input, style]}
             onChangeText={handleChangeText}
             {...props}/>
-          {RightComponent ? LeftComponent : null}
+          {RightComponent}
         </View>
       </View>
       <If when={!!error}>
@@ -61,13 +65,6 @@ export default function TextField({
       </If>
     </View>
   );
-}
-
-interface LabelProps {
-  error?: string;
-  focused: boolean;
-  label?: string;
-  size: InputSizes;
 }
 
 const Label = memo(({ error, focused, label, size }: LabelProps) => {

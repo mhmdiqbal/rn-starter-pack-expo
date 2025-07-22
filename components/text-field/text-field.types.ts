@@ -9,3 +9,10 @@ export interface TextFieldProps extends TextInputProps {
   label?: string;
   size?: InputSizes;
 }
+
+export interface LabelProps {
+  error?: string;
+  focused: boolean;
+  label?: string;
+  size: InputSizes;
+}

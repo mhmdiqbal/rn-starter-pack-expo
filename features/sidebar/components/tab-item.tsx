@@ -1,6 +1,4 @@
-import { FC } from "react";
 import { View } from "react-native";
-import { SvgProps } from "react-native-svg";
 import { StyleSheet, useUnistyles } from "react-native-unistyles";
 
 import ButtonBase from "@/components/button-base";
@@ -8,12 +6,7 @@ import Text from "@/components/text";
 import gs from "@/lib/global-styles";
 import { vs } from "@/lib/scale";
 
-interface TabItemProps {
-  Icons: [FC<SvgProps>, FC<SvgProps>];
-  isActive: boolean;
-  label: string;
-  onPress: () => void;
-}
+import { TabIconProps, TabItemProps } from "./tab-item.types";
 
 export default function TabItem({
   Icons,
@@ -36,10 +29,6 @@ export default function TabItem({
       </View>
     </ButtonBase>
   );
-}
-
-interface TabIconProps {
-  Icon: FC<SvgProps>;
 }
 
 const TabIcon = ({ Icon }: TabIconProps) => {

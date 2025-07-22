@@ -15,7 +15,7 @@ import IcStock1 from "@/assets/images/svgs/icons/stock-1.svg";
 import IcBusiness0 from "@/assets/images/svgs/icons/store-0.svg";
 import IcBusiness1 from "@/assets/images/svgs/icons/store-1.svg";
 
-import { Tab } from "./types";
+import { Tab } from "./sidebar.types";
 
 export const TABS: Tab[] = [
   // { Icon: [IcMenu0, IcMenu1], label: "Dashboard", path: "/(dashboard)" },

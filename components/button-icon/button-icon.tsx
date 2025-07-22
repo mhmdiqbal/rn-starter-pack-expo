@@ -1,4 +1,4 @@
-import { Pressable, View } from "react-native";
+import { Pressable } from "react-native";
 
 import { RIPPLE_CONFIG } from "./button-icon.cons";
 import styles from "./button-icon.styles";
@@ -14,6 +14,7 @@ export default function ButtonIcon({
 }: ButtonIconProps) {
   styles.useVariants({
     size,
+    stroke,
     variant,
   });
 
@@ -36,11 +37,7 @@ export default function ButtonIcon({
       style={({ pressed }) => [styles.container(disabled, pressed)]}
       onPress={onPress}>
       {({ pressed }) => {
-        return (
-          <View style={[styles.wrapper, stroke && styles.stroke]}>
-            {icon && renderIcon(icon, pressed)}
-          </View>
-        );
+        return icon && renderIcon(icon, pressed);
       }}
     </Pressable>
   );

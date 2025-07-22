@@ -1,9 +1,9 @@
 import { usePathname, useRouter } from "expo-router";
 import { View } from "react-native";
 
-import TabItem from "./components/TabItem";
-import { TABS } from "./constants";
-import styles from "./styles";
+import TabItem from "./components/tab-item";
+import { TABS } from "./sidebar.cons";
+import styles from "./sidebar.styles";
 
 export default function Sidebar() {
   const router = useRouter();

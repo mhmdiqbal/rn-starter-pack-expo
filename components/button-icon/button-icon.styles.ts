@@ -4,8 +4,58 @@ import { vs } from "@/lib/scale";
 
 export default StyleSheet.create((theme) => ({
   container: (disabled: boolean, pressed: boolean) => ({
+    alignItems: "center",
     borderRadius: vs(4),
+    compoundVariants: [
+      {
+        size: "lg",
+        stroke: false,
+        styles: {
+          borderWidth: 0,
+          padding: vs(12),
+        },
+        variant: "neutral",
+      },
+      {
+        size: "md",
+        stroke: false,
+        styles: {
+          borderWidth: 0,
+          padding: vs(10),
+        },
+        variant: "neutral",
+      },
+      {
+        size: "sm",
+        stroke: false,
+        styles: {
+          borderWidth: 0,
+          padding: vs(8),
+        },
+        variant: "neutral",
+      },
+    ],
     variants: {
+      size: {
+        lg: {
+          padding: vs(16),
+        },
+        md: {
+          padding: vs(14),
+        },
+        sm: {
+          padding: vs(12),
+        },
+      },
+      stroke: {
+        false: {
+          borderWidth: 0,
+        },
+        true: {
+          borderColor: theme.colors.primary[400],
+          borderWidth: vs(1),
+        },
+      },
       variant: {
         default: {
           backgroundColor: disabled
@@ -127,10 +177,6 @@ export default StyleSheet.create((theme) => ({
     },
   }),
 
-  stroke: {
-    borderWidth: vs(1),
-  },
-
   text: (disabled: boolean, pressed: boolean) => ({
     variants: {
       size: {
@@ -184,28 +230,4 @@ export default StyleSheet.create((theme) => ({
       },
     },
   }),
-
-  wrapper: {
-    alignItems: "center",
-    flexDirection: "row",
-    justifyContent: "center",
-    variants: {
-      size: {
-        lg: {
-          padding: vs(16),
-        },
-        md: {
-          padding: vs(14),
-        },
-        sm: {
-          padding: vs(12),
-        },
-      },
-      variant: {
-        link: {
-          padding: vs(4),
-        },
-      },
-    },
-  },
 }));
