@@ -1,6 +1,6 @@
 import { vs } from "@/lib/scale";
 
-import { InputSizes } from "./types";
+import { InputSizes } from "./text-field.types";
 
 export const TEXT_FIELD_HEIGHTS: Record<InputSizes, number> = {
   lg: vs(60),

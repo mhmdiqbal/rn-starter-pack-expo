@@ -1,5 +1,4 @@
 import { TextProps as TextPropsBase } from "react-native";
-import { UnistylesThemes } from "react-native-unistyles";
 
 type TextVariants =
   | "heading-1"

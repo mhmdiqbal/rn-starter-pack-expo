@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native-unistyles";
 
 import { vs } from "@/lib/scale";
 
-import { TEXT_FIELD_HEIGHTS, TEXT_FIELD_LABEL_TRANSLATE_X } from "./constants";
+import { TEXT_FIELD_HEIGHTS, TEXT_FIELD_LABEL_TRANSLATE_X } from "./text-field.cons";
 
 export default StyleSheet.create((theme) => ({
   container: {
