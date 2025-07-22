@@ -6,7 +6,7 @@ import { withUnistyles } from "react-native-unistyles";
 import gs from "@/lib/global-styles";
 import { vs } from "@/lib/scale";
 
-import Conditional from "../conditional";
+import If from "../if";
 import Text from "../text";
 import { TEXT_FIELD_HEIGHTS, TEXT_FIELD_LABEL_TRANSLATE_X } from "./text-field.cons";
 import styles from "./text-field.styles";
@@ -54,11 +54,11 @@ export default function TextField({
           {RightComponent ? LeftComponent : null}
         </View>
       </View>
-      <Conditional when={!!error}>
+      <If when={!!error}>
         <Text style={[gs.mt(vs(8)), gs.txcolor("error.400")]} variant="body-md">
           {error}
         </Text>
-      </Conditional>
+      </If>
     </View>
   );
 }
@@ -97,13 +97,13 @@ const Label = memo(({ error, focused, label, size }: LabelProps) => {
       transition={{
         damping: 18,
       }}>
-      <Conditional when={focused}>
+      <If when={focused}>
         <View
           style={styles.labelLayer(
             (labelLayout?.height || 0) / 2,
             (labelLayout?.width || 0) + vs(12)
           )}/>
-      </Conditional>
+      </If>
       <MotiText
         style={styles.label}
         animate={{

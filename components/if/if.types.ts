@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface ConditionalProps {
+export interface IfProps {
   children: ReactNode;
   fallback?: ReactNode;
   when: boolean;
