@@ -1,8 +1,13 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
+ 
 import { StyleSheet } from "react-native-unistyles";
 
 import { vs } from "@/lib/scale";
 
-import { TEXT_FIELD_HEIGHTS, TEXT_FIELD_LABEL_TRANSLATE_X } from "./text-field.cons";
+import {
+  TEXT_FIELD_HEIGHTS,
+  TEXT_FIELD_LABEL_TRANSLATE_X,
+} from "./text-field.cons";
 
 export default StyleSheet.create((theme) => ({
   container: {
@@ -19,10 +24,21 @@ export default StyleSheet.create((theme) => ({
           borderColor: theme.colors.error[300],
         },
       },
+      {
+        hasLeft: true,
+        styles: {
+          paddingLeft: vs(14),
+        },
+      },
+      {
+        hasRight: true,
+        styles: {
+          paddingRight: vs(14),
+        },
+      },
     ],
     flexDirection: "row",
     justifyContent: "space-between",
-
     variants: {
       error: {
         true: {
@@ -39,17 +55,14 @@ export default StyleSheet.create((theme) => ({
         lg: {
           gap: vs(16),
           height: TEXT_FIELD_HEIGHTS.lg,
-          paddingHorizontal: vs(24),
         },
         md: {
           gap: vs(16),
           height: TEXT_FIELD_HEIGHTS.md,
-          paddingHorizontal: vs(20),
         },
         sm: {
           gap: vs(8),
           height: TEXT_FIELD_HEIGHTS.sm,
-          paddingHorizontal: vs(16),
         },
       },
     },
@@ -61,6 +74,20 @@ export default StyleSheet.create((theme) => ({
     paddingLeft: 0,
     paddingRight: 0,
     paddingTop: 0,
+    compoundVariants: [
+      {
+        hasLeft: true,
+        styles: {
+          paddingLeft: vs(0),
+        },
+      },
+      {
+        hasRight: true,
+        styles: {
+          paddingRight: vs(0),
+        },
+      },
+    ],
     variants: {
       error: {
         true: {
@@ -77,16 +104,32 @@ export default StyleSheet.create((theme) => ({
           height: vs(60),
           ...theme.typography["body-lg"],
           lineHeight: 0,
+          paddingLeft: vs(24),
+          paddingRight: vs(24),
         },
         md: {
           height: vs(52),
           ...theme.typography["body-lg"],
           lineHeight: 0,
+          paddingLeft: vs(20),
+          paddingRight: vs(20),
         },
         sm: {
           height: vs(44),
           ...theme.typography["body-md"],
           lineHeight: 0,
+          paddingLeft: vs(16),
+          paddingRight: vs(16),
+        },
+      },
+      hasLeft: {
+        true: {
+          paddingLeft: vs(0),
+        },
+      },
+      hasRight: {
+        true: {
+          paddingRight: vs(0),
         },
       },
     },

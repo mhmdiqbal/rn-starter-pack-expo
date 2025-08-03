@@ -10,6 +10,7 @@ export default function ButtonIcon({
   onPress,
   size = "md",
   stroke,
+  style,
   variant = "primary",
 }: ButtonIconProps) {
   styles.useVariants({
@@ -34,7 +35,10 @@ export default function ButtonIcon({
     <Pressable
       android_ripple={RIPPLE_CONFIG}
       disabled={disabled}
-      style={({ pressed }) => [styles.container(disabled, pressed)]}
+      style={({ hovered, pressed }) => [
+        styles.container(disabled, pressed),
+        typeof style === "function" ? style({ hovered, pressed }) : style,
+      ]}
       onPress={onPress}>
       {({ pressed }) => {
         return icon && renderIcon(icon, pressed);

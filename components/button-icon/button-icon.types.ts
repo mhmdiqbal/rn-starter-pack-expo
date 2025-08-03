@@ -1,4 +1,4 @@
-import { StyleProp, ViewStyle } from "react-native";
+import { PressableProps } from "react-native";
 
 export type ButtonIconVariants =
   | "primary"
@@ -16,12 +16,11 @@ type IconProps = {
   width: number;
 };
 
-export interface ButtonIconProps {
+export interface ButtonIconProps extends PressableProps {
   disabled?: boolean;
   icon?:
     | React.ReactNode
     | (({ color, height, width }: IconProps) => React.ReactNode);
-  onPress: () => void;
   size?: ButtonIconSizes;
   stroke?: boolean;
   variant?: ButtonIconVariants;

@@ -35,7 +35,13 @@ export default function TextField({
 }: TextFieldProps) {
   const [focused, setFocused] = useState<boolean>(false);
 
-  styles.useVariants({ error: !!error, focused, size });
+  styles.useVariants({
+    error: !!error,
+    focused,
+    hasLeft: !!LeftComponent,
+    hasRight: !!RightComponent,
+    size,
+  });
 
   const handleChangeText = (val: string) => {
     setFocused(val.length > 0);
